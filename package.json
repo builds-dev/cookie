@@ -1,0 +1,51 @@
+{
+  "name": "@holographio/cookie",
+  "umd:name": "cookie",
+  "version": "1.0.0",
+  "description": "Functions for cookies.",
+  "main": "dist/index.cjs",
+  "module": "dist/esm/index.js",
+  "unpkg": "dist/index.umd.min.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "glob-files": "glob-module-file --format=es --importStar --pathPrefix='' --pattern \"${GLOB_FILES_PATTERN}\"",
+    "run-glob-pattern": "npm run --silent glob-files | rollup -c rollup.tests.config.js > build/run.js && node --enable-source-maps build/run.js",
+    "tests": "GLOB_FILES_PATTERN=\"./{src,test,tests}/**/*.{spec,test}.js\" npm run --silent run-glob-pattern",
+    "tests:watch": "onchange 'src/**/*' -i -- npm run --silent tests",
+    "node-run": "f () { GLOB_FILES_PATTERN=\"$1\" npm run --silent run-glob-pattern; }; f",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "test:docs": "gfmjs ./README.md",
+    "test": "npm-run-all --sequential tests test:docs",
+    "dev": "onchange 'src/**/*' -i -- npm run tests"
+  },
+  "keywords": [
+    "cookie",
+    "header",
+    "parse",
+    "stringify"
+  ],
+  "author": "Johnny Hauser <johnnyhauser@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holographio/cookie"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "gfmjs": "github:getstay/gfmjs",
+    "glob-module-file": "^3.0.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "rollup": "^2.58.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "uvu": "^0.5.2"
+  }
+}
