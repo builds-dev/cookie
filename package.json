@@ -1,7 +1,7 @@
 {
   "name": "@holographio/cookie",
   "umd:name": "cookie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Functions for cookies.",
   "main": "dist/index.cjs",
   "module": "dist/esm/index.js",
