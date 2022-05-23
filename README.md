@@ -1,7 +1,7 @@
 # cookie
 
 ```node
-import * as cookie from '@holographio/cookie'
+import * as cookie from '@builds-dev/cookie'
 ```
 
 <!--js

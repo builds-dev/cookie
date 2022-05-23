@@ -1,5 +1,5 @@
 {
-  "name": "@holographio/cookie",
+  "name": "@builds-dev/cookie",
   "umd:name": "cookie",
   "version": "1.0.1",
   "description": "Functions for cookies.",
@@ -36,7 +36,7 @@
   "author": "Johnny Hauser <johnnyhauser@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/holographio/cookie"
+    "url": "https://github.com/builds-dev/cookie"
   },
   "license": "ISC",
   "devDependencies": {
