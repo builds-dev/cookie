@@ -1,7 +1,7 @@
 {
   "name": "@builds-dev/cookie",
   "umd:name": "cookie",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Functions for cookies.",
   "main": "dist/index.cjs",
   "module": "dist/esm/index.js",
