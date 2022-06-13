@@ -40,8 +40,8 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@builds-dev/gfmjs": "^2.0.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
-    "gfmjs": "github:getstay/gfmjs",
     "glob-module-file": "^3.0.2",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
